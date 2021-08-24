@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.yhzc.schooldormitorymobile.ui.notetake.NoteTakeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.notetake.take.NoteTakeActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_type"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#F2F3F4"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="#DADADA"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/the_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1" />
+
+            <EditText
+                android:id="@+id/et_num"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:labelFor="@id/et_num"
+                android:maxLines="1"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_num"
+                app:layout_constraintTop_toTopOf="@id/tv_num" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DADADA"
+                app:layout_constraintTop_toBottomOf="@id/et_num" />
+
+            <TextView
+                android:id="@+id/tv_bz"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/beizhu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <EditText
+                android:id="@+id/et_bz"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:labelFor="@id/et_bz"
+                android:maxLines="1"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_bz"
+                app:layout_constraintTop_toTopOf="@id/tv_bz" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DADADA"
+                app:layout_constraintTop_toBottomOf="@id/et_bz" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line3"/>
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#DADADA"
+                app:layout_constraintBottom_toBottomOf="@id/rv_time"
+                app:layout_constraintStart_toEndOf="@id/rv_time"
+                app:layout_constraintTop_toTopOf="@id/rv_time" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_date"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rv_time"
+                app:layout_constraintTop_toTopOf="@id/rv_time">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/image"
+                    android:src="@mipmap/ic_sign_calendar"
+                    app:layout_constraintBottom_toTopOf="@id/tv_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/today"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="2021年3月5日" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#DADADA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cl_date"
+                app:layout_constraintTop_toBottomOf="@id/cl_date" />
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/color1094f5"
+                android:gravity="center"
+                android:text="@string/wanc"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cl_date"
+                app:layout_constraintTop_toBottomOf="@id/line11" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--0,2,4,6,8,10,12,14,16,18,20,22,24-->
+</layout>

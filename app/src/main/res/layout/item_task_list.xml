@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/color333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_ongoing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="突击检查" />
+
+    <TextView
+        android:id="@+id/tv_ongoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="5dp"
+        android:enabled="true"
+        android:text="@string/ongoing"
+        android:textSize="13sp"
+        app:drawableStartCompat="@mipmap/ic_back_room_ing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="5dp"
+        android:enabled="true"
+        android:text="@string/over"
+        android:textSize="13sp"
+        android:visibility="invisible"
+        app:drawableStartCompat="@mipmap/ic_back_room_over"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        tools:text="正在进行" />
+
+
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_ongoing"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="检查人员：张三" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_ongoing"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user"
+        tools:text="检查位置：县友兰中学测试1测试1" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_ongoing"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location"
+        tools:text="检查日期：2021-07-09" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_ongoing"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        tools:text="检查时间：15:30:00至16:30:00" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

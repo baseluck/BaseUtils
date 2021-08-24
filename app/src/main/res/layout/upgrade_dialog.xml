@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_white_radius_8dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/beta_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:tag="beta_title"
+            android:textColor="@color/color333333"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="版本更新啦!" />
+
+        <TextView
+            android:id="@+id/beta_upgrade_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:lineSpacingExtra="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:tag="beta_upgrade_info"
+            android:textColor="@color/color555555"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/beta_title"
+            tools:text="1、快来升级最新版本\n2、这次更漂亮了\n3、快点来吧" />
+
+        <TextView
+            android:id="@+id/tv_gxsm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/gxsm"
+            android:textColor="@color/color555555"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beta_upgrade_info" />
+
+        <TextView
+            android:id="@+id/beta_upgrade_feature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:lineSpacingExtra="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:tag="beta_upgrade_feature"
+            android:textColor="@color/color555555"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_gxsm"
+            tools:text="功能说明" />
+
+
+        <TextView
+            android:id="@+id/beta_confirm_button"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/frame_1094f5_radius_8dp"
+            android:gravity="center"
+            android:tag="beta_confirm_button"
+            android:text="@string/update_now"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/beta_cancel_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beta_upgrade_feature"
+            app:layout_goneMarginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/beta_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:tag="beta_cancel_button"
+            android:text="@string/update_cancel"
+            android:textColor="@color/color555555"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beta_confirm_button"
+            app:layout_goneMarginTop="10dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

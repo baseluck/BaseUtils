@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/home_nav">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yhzc.schooldormitorymobile.ui.home.fragment.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/mineFragment"
+        android:name="com.yhzc.schooldormitorymobile.ui.home.fragment.mine.MineFragment"
+        android:label="MineFragment" />
+</navigation>

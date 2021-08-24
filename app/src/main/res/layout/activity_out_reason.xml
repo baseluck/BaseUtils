@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.outReason.OutReasonActivity">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_sign_ly"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            app:hl_layoutBackground="@color/white"
+            app:hl_shadowColor="@color/color333333"
+            app:hl_shadowHiddenLeft="true"
+            app:hl_shadowHiddenRight="true"
+            app:hl_shadowLimit="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/sign_lytx"
+                    android:textColor="@color/color333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_sign_ly"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint="@string/sign_ly_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textSize="13sp"
+                    android:maxLength="300"
+                    android:textColor="@color/color333333"
+                    android:textColorHint="@color/color999999"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:ignore="LabelFor" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_other"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            app:hl_layoutBackground="@color/white"
+            app:hl_shadowColor="@color/color333333"
+            app:hl_shadowHiddenLeft="true"
+            android:visibility="gone"
+            app:hl_shadowHiddenRight="true"
+            app:hl_shadowLimit="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sl_sign_ly"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/sign_qtnr"
+                    android:textColor="@color/color333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_sign_other"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint="@string/sign_ly_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textSize="13sp"
+                    android:maxLength="300"
+                    android:textColor="@color/color333333"
+                    android:textColorHint="@color/color999999"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_other"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_other"
+                    tools:ignore="LabelFor" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.lihang.ShadowLayout>
+
+
+        <TextView
+            android:id="@+id/tv_wcsy"
+            android:layout_width="301dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/frame_1094f5_radius_8dp"
+            android:gravity="center"
+            android:text="@string/queding"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

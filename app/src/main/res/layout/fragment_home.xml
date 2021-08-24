@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                tools:context="com.yhzc.schooldormitorymobile.ui.home.fragment.home.HomeFragment">
+
+                <com.yhzc.schooldormitorymobile.view.StatusBarHeightView
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:use_type="use_padding_top" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="168dp"
+                    android:contentDescription="@string/image"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_home_top" />
+
+                <ImageView
+                    android:id="@+id/iv_msg"
+                    android:layout_width="18dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/image"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/top"
+                    app:srcCompat="@mipmap/ic_home_msg" />
+
+
+                <com.youth.banner.Banner
+                    android:id="@+id/bannerView"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="21dp"
+                    app:banner_indicator_normal_color="@color/colora9d9fb"
+                    app:banner_indicator_selected_color="@color/color1094f5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_msg" />
+
+                <com.youth.banner.indicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@id/bannerView"
+                    app:layout_constraintStart_toStartOf="@id/bannerView"
+                    app:layout_constraintTop_toBottomOf="@id/bannerView" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_notice"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:background="@mipmap/shadow_fff2e3"
+                    android:visibility="gone"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/indicator">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner_notice"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_tongzhi"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_notice_msg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_tongzhi"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/divider4"
+                            android:layout_width="2dp"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="15dp"
+                            android:background="@drawable/frame_333333_round"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_msg1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_msg1" />
+
+
+                        <TextView
+                            android:id="@+id/tv_msg1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:maxLines="1"
+                            android:text="@string/no_notice"
+                            android:textColor="@color/color333333"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/divider4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_tongzhi"
+                        android:layout_width="29dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_tzgg" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_app"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shadow"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_notice">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shadow"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_app">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center"
+                        android:text="@string/school_news"
+                        android:textColor="@color/color333333"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_news_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="@string/home_more"
+                        android:textColor="@color/color666666"
+                        android:textSize="13sp"
+                        app:drawableEndCompat="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_news_more" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_home_top"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.yhzc.schooldormitorymobile.view.StatusBarHeightView
+                android:id="@+id/top2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:use_type="use_padding_top" />
+
+            <ImageView
+                android:id="@+id/iv_msg2"
+                android:layout_width="18dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="21dp"
+                android:contentDescription="@string/image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top2"
+                app:srcCompat="@mipmap/ic_home_msg" />
+
+            <View
+                android:id="@+id/vm"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_msg2"
+                app:layout_constraintTop_toTopOf="@id/iv_msg2" />
+
+            <View
+                android:id="@+id/v_new_msg"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/frame_e7563f_round"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/vm"
+                app:layout_constraintEnd_toEndOf="@id/vm"
+                app:layout_constraintStart_toStartOf="@id/vm"
+                app:layout_constraintTop_toTopOf="@id/vm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.noticeMsg.newNotice.SendNoticeActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bt"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/bt"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/et_bt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint="@string/qsrbt"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bt"
+                app:layout_constraintTop_toTopOf="@id/bt"
+                tools:ignore="LabelFor" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/bt" />
+
+            <TextView
+                android:id="@+id/tsyh"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/tsyh"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tsyh"
+                app:layout_constraintTop_toBottomOf="@id/tsyh" />
+
+            <TextView
+                android:id="@+id/tv_add_user"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/frame_1094f5_radius_8dp"
+                android:gravity="center"
+                android:text="@string/tjyh"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/rv_user"
+                app:layout_constraintTop_toBottomOf="@id/v1" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/rv_user" />
+
+            <TextView
+                android:id="@+id/sfhf"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/sfkqhf"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v2" />
+
+            <RadioGroup
+                android:id="@+id/rg_hf"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sfhf"
+                app:layout_constraintTop_toTopOf="@id/sfhf">
+
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/sfhf" />
+
+            <TextView
+                android:id="@+id/fbzt"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/fbzt"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v3" />
+
+            <RadioGroup
+                android:id="@+id/rg_fb"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fbzt"
+                app:layout_constraintTop_toTopOf="@id/fbzt">
+
+                <RadioButton
+                    android:id="@+id/rb_cgx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/cgx" />
+
+                <RadioButton
+                    android:id="@+id/rb_fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:text="@string/fb" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/v4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/fbzt" />
+
+            <TextView
+                android:id="@+id/tjtp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/sczp"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v4" />
+
+            <TextView
+                android:id="@+id/tv_add_img"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/frame_1094f5_radius_8dp"
+                android:gravity="center"
+                android:text="@string/xzzp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/rv_image"
+                app:layout_constraintTop_toBottomOf="@id/v4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tjtp"
+                app:layout_constraintTop_toBottomOf="@id/tjtp" />
+
+            <View
+                android:id="@+id/v5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/rv_image" />
+
+            <TextView
+                android:id="@+id/tjsp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/scsp"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v5" />
+
+            <TextView
+                android:id="@+id/tv_add_video"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/frame_1094f5_radius_8dp"
+                android:gravity="center"
+                android:text="@string/xzsp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/rv_image"
+                app:layout_constraintTop_toBottomOf="@id/v5" />
+
+            <cn.jzvd.JzvdStd
+                android:id="@+id/js_video"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/tjsp" />
+
+            <View
+                android:id="@+id/v6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/js_video" />
+            <TextView
+                android:id="@+id/tsnr"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/tsnr"
+                android:textColor="@color/color333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v6" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_srk"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tsnr"
+                android:background="@drawable/frame_eeeee_radius_5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content">
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/sv_wmet"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="200dp">
+                    <com.widemouth.library.wmview.WMEditText
+                        android:id="@+id/wmet"
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_height="match_parent" />
+                </androidx.core.widget.NestedScrollView>
+
+                <com.widemouth.library.wmview.WMToolContainer
+                    android:id="@+id/wmtc"
+                    app:layout_constraintTop_toBottomOf="@id/sv_wmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="1dp"
+                android:background="@color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_srk"
+                android:layout_height="30dp"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

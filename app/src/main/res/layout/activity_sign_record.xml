@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.signRecord.SignRecordActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_head"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_head" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_head"
+                    app:layout_constraintTop_toTopOf="@+id/iv_head"
+                    tools:text="张老师" />
+
+                <TextView
+                    android:id="@+id/tv_bm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+                    app:layout_constraintStart_toEndOf="@+id/iv_head"
+                    tools:text="教师部门" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/frame_f9f9f9_radius_8dp"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp"
+                    app:drawableEndCompat="@mipmap/ic_sign_down"
+                    app:drawableStartCompat="@mipmap/ic_sign_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2021年3月" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_tj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/shadow"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_head">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_keyboard_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/tv_month_tj"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="8月统计" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_month_tj"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_qq_num"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/guideline12"
+                        tools:text="1200"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_qq"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_qq_num"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/guideline12"
+                        android:text="@string/queqin"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_dk_num"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideline12"
+                        app:layout_constraintEnd_toStartOf="@id/guideline13"
+                        tools:text="1200"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_dk"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_dk_num"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/guideline12"
+                        app:layout_constraintEnd_toStartOf="@id/guideline13"
+                        android:text="@string/daka"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_all_num"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideline13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="1200"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_all"
+                        android:layout_width="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_dk_num"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@id/guideline13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/all_daka"
+                        android:gravity="center"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3333333" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.6666666" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_tj">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.haibin.calendarview.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="#FFF7F8FC"
+                        app:calendar_height="50dp"
+                        app:calendar_show_mode="both_month_week_view"
+                        app:current_month_lunar_text_color="#CFCFCF"
+                        app:current_month_text_color="#333333"
+                        app:day_text_size="16sp"
+                        app:default_status="expand"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lunar_text_size="8sp"
+                        app:min_year="2000"
+                        app:month_view="com.yhzc.schooldormitorymobile.view.calendarView.CustomMonthView"
+                        app:month_view_show_mode="mode_fix"
+                        app:other_month_text_color="#e1e1e1"
+                        app:scheme_text="假"
+                        app:scheme_text_color="#333"
+                        app:scheme_theme_color="#128c4b"
+                        app:selected_lunar_text_color="#CFCFCF"
+                        app:selected_text_color="#ffffff"
+                        app:selected_theme_color="#FF1481FF"
+                        app:week_background="#FFF7F8FC"
+                        app:week_text_color="#111"
+                        app:week_view="com.yhzc.schooldormitorymobile.view.calendarView.IndexWeekView"
+                        app:week_view_scrollable="true"
+                        app:year_view_day_text_color="#333333"
+                        app:year_view_day_text_size="9sp"
+                        app:year_view_month_text_color="#ff0000"
+                        app:year_view_month_text_size="20sp"
+                        app:year_view_scheme_color="#f17706" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_sign_record"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

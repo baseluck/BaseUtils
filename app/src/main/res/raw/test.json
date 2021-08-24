@@ -1,0 +1,48 @@
+{
+  "code": 200,
+  "msg": "Success",
+  "data": [
+    {
+      "firstTitle": "A1",
+      "firstList": [
+        {
+          "secondTitle": "B1",
+          "secondList": [
+            {
+              "kpxz": "正常课时2分"
+            },
+            {
+              "kpxz": "自习课时1分"
+            }
+          ]
+        },
+        {
+          "secondTitle": "B2",
+          "secondList": [
+            {
+              "kpxz": "打扫卫生2分"
+            },
+            {
+              "kpxz": "组织活动1分"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "firstTitle": "A2",
+      "firstList": [
+        {
+          "secondTitle": "B1",
+          "secondList": [
+          ]
+        },
+        {
+          "secondTitle": "B2",
+          "secondList": [
+          ]
+        }
+      ]
+    }
+  ]
+}

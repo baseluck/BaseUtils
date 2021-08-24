@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_js"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color333333"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/v_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1.周工作量达到和超过一级工作量\n2.周工作量达到和超过一级工作量" />
+
+    <View
+        android:id="@+id/v_round"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/frame_04dfff_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_js" />
+
+    <EditText
+        android:id="@+id/et_zp"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:focusable="false"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/frame_line_999999_radius_5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:textColor="@color/color333333"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/et_score"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/ziping"
+        app:layout_constraintBottom_toBottomOf="@id/et_zp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_zp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/khxq_num"
+        app:layout_constraintBottom_toBottomOf="@id/et_score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_score"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shuliang"
+        app:layout_constraintBottom_toBottomOf="@id/et_num"
+        app:layout_constraintEnd_toStartOf="@id/iv_minus"
+        app:layout_constraintTop_toTopOf="@id/et_num" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toBottomOf="@id/et_num"
+        app:layout_constraintStart_toEndOf="@id/et_score"
+        app:layout_constraintTop_toTopOf="@id/et_num" />
+
+
+    <EditText
+        android:id="@+id/et_num"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:focusable="false"
+        android:background="@drawable/frame_line_999999_radius_5dp"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="5dp"
+        android:text="@string/zero"
+        android:textColor="@color/color333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_score"
+        app:layout_constraintEnd_toStartOf="@id/iv_add"
+        app:layout_constraintTop_toBottomOf="@id/tv_js"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/et_score"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame_line_999999_radius_5dp"
+        android:gravity="start|top"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color666666"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/textView6"
+        app:layout_constraintTop_toBottomOf="@id/tv_js"
+        tools:text="10" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/image"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/et_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_num"
+        app:srcCompat="@drawable/ic_baseline_add_15" />
+
+    <ImageView
+        android:id="@+id/iv_minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/image"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/et_num"
+        app:layout_constraintEnd_toStartOf="@id/et_num"
+        app:layout_constraintTop_toTopOf="@id/et_num"
+        app:srcCompat="@drawable/ic_baseline_horizontal_rule_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+{
+  "code": 200,
+  "msg": "请求成功",
+  "data": {
+    "banner": [
+      {
+        "picUrl": "https://z3.ax1x.com/2021/04/29/gFlV0I.png",
+        "bannerId": "01",
+        "bannerName": "校园文化艺术节1"
+      },
+      {
+        "picUrl": "https://z3.ax1x.com/2021/04/29/gFlV0I.png",
+        "bannerId": "02",
+        "bannerName": "校园文化艺术节2"
+      },
+      {
+        "picUrl": "https://z3.ax1x.com/2021/04/29/gFlV0I.png",
+        "bannerId": "02",
+        "bannerName": "校园文化艺术节2"
+      }
+    ],
+    "notice": [
+      {
+        "noticeId": "01",
+        "noticeName": "全民国家安全教育日法制宣传活动1"
+      },
+      {
+        "noticeId": "02",
+        "noticeName": "关于五一劳动节放假通知说明"
+      },
+      {
+        "noticeId": "03",
+        "noticeName": "全民国家安全教育日法制宣传活动2"
+      }
+    ],
+    "news": [
+      {
+        "newsId": "01",
+        "newsTitle": "道德讲堂学习教育专题",
+        "newsPicUrl": "",
+        "newsContent": "广大青年学子通过学习河东地区党组织的发展历史，能够进一步了解过去、把握现在、展望未来，做到知史爱党",
+        "newsTime": "2021-04-21"
+      },
+      {
+        "newsId": "02",
+        "newsTitle": "青年开展学雷锋志愿服务活动",
+        "newsPicUrl": "",
+        "newsContent": "活动中志愿者们饱满的精神，积极向上的态度，体现了青年学生的责任意识和奉献精神，得到了地方政府及群众",
+        "newsTime": "2021-04-21"
+      },
+      {
+        "newsId": "03",
+        "newsTitle": "青春飞扬 梦想起航",
+        "newsPicUrl": "",
+        "newsContent": "勤奋耕耘，成就辉煌梦想；积蓄力量，铸就灿烂人生。勇于担当奉献，为实现中华民族伟大复兴的中国梦努力奋斗",
+        "newsTime": "2021-04-21"
+      }
+    ]
+  }
+}

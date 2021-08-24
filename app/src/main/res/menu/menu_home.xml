@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@mipmap/ic_home"
+            android:actionLayout="@layout/home_menu"
+            android:title="@string/home_xxfw" />
+        <item
+            android:id="@+id/mineFragment"
+            android:icon="@mipmap/ic_mine"
+            android:actionLayout="@layout/home_menu"
+            android:title="@string/homg_wdkj" />
+    </group>
+
+
+</menu>

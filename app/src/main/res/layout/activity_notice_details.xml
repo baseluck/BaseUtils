@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.noticeMsg.details.NoticeDetailsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:textColor="@color/color333333"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="关于XXX的通知" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+                <TextView
+                    android:id="@+id/tv_publisher"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="发布人：刘主任" />
+
+                <TextView
+                    android:id="@+id/tv_publish_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="end"
+                    android:textColor="@color/color333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="发布时间：2021-05-21 09:33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/wv_content" />
+
+
+            <cn.jzvd.JzvdStd
+                android:id="@+id/jz"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/rv_img" />
+
+            <WebView
+                android:id="@+id/wv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_user" />
+
+            <View
+                android:id="@+id/vline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/coloreeeeee"
+                app:layout_constraintTop_toBottomOf="@id/jz" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_hf" />
+
+            <TextView
+                android:id="@+id/tv_hf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/huifu"
+                android:textColor="@color/color1094f5"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/rv_fh"
+                app:layout_constraintTop_toBottomOf="@id/vline" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_hf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_hf">
+
+                <EditText
+                    android:id="@+id/et_hf"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/frame_eeeee_radius_5dp"
+                    android:gravity="start|top"
+                    android:hint="@string/srhfnr"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/tv_add_hf_img"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/frame_1094f5_radius_8dp"
+                    android:gravity="center"
+                    android:text="@string/xzzp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/et_hf"
+                    app:layout_constraintTop_toTopOf="@id/tv_send"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_send"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/frame_1094f5_radius_8dp"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/et_hf"
+                    app:layout_constraintTop_toBottomOf="@id/et_hf" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_hf_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_send" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:background="@color/transparent"
+                app:layout_constraintStart_toStartOf="@id/cl_hf"
+                app:layout_constraintTop_toBottomOf="@id/cl_hf" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

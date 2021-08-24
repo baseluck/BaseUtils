@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_leave_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/color333333"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="假期类型" />
+
+    <TextView
+        android:id="@+id/tv_leave_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color333333"
+        android:textColorHint="@color/color999999"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_leave_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leave_title"
+        tools:text="请选择" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_leave_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_leave_title"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right" />
+</androidx.constraintlayout.widget.ConstraintLayout>

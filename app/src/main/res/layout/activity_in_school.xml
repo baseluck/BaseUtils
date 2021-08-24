@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.yhzc.schooldormitorymobile.ui.outsider.OutsiderActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_send"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shadow"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_read_idcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/nfc_read_card"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_read_idcard"
+                        tools:text="姓        名：张三" />
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                        tools:text="性        别：女" />
+
+                    <TextView
+                        android:id="@+id/tv_birth"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@id/iv_head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_sex"
+                        tools:text="出生年月：1989年9月15日" />
+
+                    <TextView
+                        android:id="@+id/tv_idcard"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_birth"
+                        tools:text="证件号码：14102419890915****" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_idcard"
+                        tools:text="地        址：山西省太原市小店区张三村026号" />
+
+                    <ImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="88dp"
+                        android:layout_height="128dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/image"
+                        android:scaleType="fitXY"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shadow"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_idcard">
+
+                    <TextView
+                        android:id="@+id/fwry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="16sp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lxdh"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/et_lxdh"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@null"
+                        android:gravity="center_vertical|end"
+                        android:hint="@string/qsrlxdh"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/fwry"
+                        app:layout_constraintTop_toTopOf="@id/fwry"
+                        tools:layout_editor_absoluteX="142dp"
+                        tools:layout_editor_absoluteY="17dp" />
+
+                    <View
+                        android:id="@+id/v_line1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colord9d9d9"
+                        app:layout_constraintEnd_toEndOf="@id/et_lxdh"
+                        app:layout_constraintStart_toStartOf="@id/fwry"
+                        app:layout_constraintTop_toBottomOf="@+id/fwry"
+                        tools:layout_editor_absoluteX="16dp" />
+
+                    <TextView
+                        android:id="@+id/lxdh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="16sp"
+                        android:gravity="center_vertical"
+                        android:text="@string/in_dormitory"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/v_line1" />
+
+                    <EditText
+                        android:id="@+id/et_ss"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@null"
+                        android:gravity="center_vertical|end"
+                        android:hint="@string/qsrssh"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/color333333"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/lxdh"
+                        app:layout_constraintTop_toTopOf="@id/lxdh" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shadow"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_user">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/in_bz"
+                        android:textColor="@color/color333333"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/et_bz"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="@string/sign_ly_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:maxLength="300"
+                        android:textColor="@color/color333333"
+                        android:textColorHint="@color/color999999"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:ignore="LabelFor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="301dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/frame_1094f5_radius_8dp"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

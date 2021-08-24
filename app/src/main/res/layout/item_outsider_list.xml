@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="张三的入校申请" />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/image"
+        android:drawablePadding="5dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_hqsy"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="联系电话：13753154242" />
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hqsy"
+        tools:text="入校时间：2021-06-24 14:14:30" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_time"
+        tools:text="离校时间：2021-06-24 14:45:00" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_car"
+        tools:text="入校理由：项目商讨" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_reason" />
+
+
+    <TextView
+        android:id="@+id/tv_car"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user"
+        tools:text="车牌号码：无" />
+
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_status"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_end_time"
+        tools:text="拜访人员：李四" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

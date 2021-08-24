@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        tools:context="com.yhzc.schooldormitorymobile.ui.signIn.SignInActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.cy.tablayoutniubility.TabLayoutNoScroll
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/frame_dbeefc_radius_8dp"
+                app:cy_space_horizontal="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.cy.tablayoutniubility.IndicatorLineView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cy_width_indicator_max="80dp"
+                    app:cy_width_indicator_selected="30dp" />
+            </com.cy.tablayoutniubility.TabLayoutNoScroll>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tablayout">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="@color/colorb5dcf9"
+                app:layout_constraintBottom_toBottomOf="@+id/tablayout"
+                app:layout_constraintEnd_toEndOf="@+id/tablayout"
+                app:layout_constraintStart_toStartOf="@+id/tablayout"
+                app:layout_constraintTop_toTopOf="@+id/tablayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

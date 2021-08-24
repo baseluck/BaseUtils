@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="张三的返校" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:drawablePadding="5dp"
+        android:enabled="true"
+        android:visibility="gone"
+        android:textSize="13sp"
+        app:drawableStartCompat="@mipmap/ic_dsp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        tools:text="待审批" />
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_hqsy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="班级：高二test02班" />
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hqsy"
+        tools:text="学号：1001011" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_time"
+        tools:text="返校时间：2021-06-24 14:19:08" />
+
+    <TextView
+        android:id="@+id/tv_bz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_end_time"
+        tools:text="备注：无" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

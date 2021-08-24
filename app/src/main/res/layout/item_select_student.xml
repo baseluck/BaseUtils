@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/color333333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="张天天" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/color333333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="女" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/color666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2016050625" />
+
+    <TextView
+        android:id="@+id/tv_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/color999999"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/ic_select_class"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="高一357班" />
+
+    <TextView
+        android:id="@+id/tv_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/color999999"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/ic_select_room"
+        app:layout_constraintEnd_toEndOf="@id/tv_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="光华二斋G3510" />
+
+
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/color999999"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/ic_select_teacher"
+        app:layout_constraintEnd_toEndOf="@+id/tv_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="张红芬" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

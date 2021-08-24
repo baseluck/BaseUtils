@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yhzc.schooldormitorymobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SchoolDormitoryMobile"
+        tools:ignore="AllowBackup"
+        tools:targetApi="n">
+        <activity android:name=".ui.modifystudent.studentdetails.ModifyStudentActivity" />
+        <activity
+            android:name=".ui.modifystudent.classlist.ClassListActivity"
+            android:exported="true" />
+        <activity android:name=".ui.checkhealth.locationlist.LocationListHActivity" />
+        <activity android:name=".ui.checkthebed.locationList.LocationListActivity" />
+        <activity android:name=".ui.suppliesapply.putdetails.WzPutDetailsActivity" />
+        <activity android:name=".ui.suppliesapply.putlist.PutApplyListActivity" />
+        <activity android:name=".ui.suppliesapply.putapply.PutApplyActivity" />
+        <activity android:name=".ui.suppliesapply.confirm.ConfirmOverDetailsActivity" />
+        <activity android:name=".ui.suppliesapply.confirm.ConfirmDetailsActivity" />
+        <activity android:name=".ui.suppliesapply.rkqrlist.RkqrApplyListActivity" />
+        <activity android:name=".ui.suppliesapply.ckqrlist.CkqrApplyListActivity" />
+        <activity android:name=".ui.suppliesapply.confirm.WzApplyConfirmActivity" />
+        <activity android:name=".ui.discipline.bzr.list.CkDisciplineListActivity" />
+        <activity android:name=".ui.discipline.bzr.details.CkDisciplineDetailsActivity" />
+        <activity android:name=".ui.signRecord.SignInTjActivity" />
+        <activity android:name=".ui.statistics.PersonCheckStatisticsActivity" />
+        <activity android:name=".ui.mobileOffice.editor.EditorOfficeActivity" />
+        <activity android:name=".ui.backbedroom.checkin.CheckInBedroomActivity" />
+        <activity android:name=".ui.discipline.details.DisciplineDetailsActivity" />
+        <activity android:name=".ui.discipline.list.DisciplineListActivity" />
+        <activity android:name=".ui.message.details.MessageDetailsActivity" />
+        <activity android:name=".ui.message.list.MessageListActivity" />
+        <activity android:name=".ui.performance.rank.PerformanceRankDetailsActivity" />
+        <activity android:name=".ui.performance.PerformanceRankListActivity" />
+        <activity android:name=".ui.suppliesapply.applydetails.WzApplyDetailsActivity" />
+        <activity android:name=".ui.suppliesapply.returnsdetails.ReturnsDetailsActivity" />
+        <activity android:name=".ui.suppliesapply.returnslist.ReturnsListActivity" />
+        <activity android:name=".ui.suppliesapply.returns.SuppliesReturnsActivity" />
+        <activity android:name=".ui.notetake.notetype.NoteTypeActivity" />
+        <activity android:name=".ui.notetake.details.NoteDetailsActivity" />
+        <activity android:name=".ui.notetake.take.NoteTakeActivity" />
+        <activity android:name=".ui.meeting.signin.MeetingSignInNoUserFaceActivity" />
+        <activity android:name=".ui.notetake.list.NoteTakeListActivity" />
+        <activity android:name=".ui.performanceDetails.PerformanceDetailsSpEndActivity" />
+        <activity android:name=".ui.suppliesapply.apply.SuppliesApplyActivity" />
+        <activity android:name=".ui.suppliesapply.applylist.SuppliesApplyListActivity" />
+        <activity android:name=".ui.checkhealth.details.CheckHealthDetailsActivity" />
+        <activity android:name=".ui.checkhealth.list.HealthTaskListActivity" />
+        <activity android:name=".ui.checkhealth.choosebedroom.ChooseHealthRoomActivity" />
+        <activity android:name=".ui.meeting.initiatedetails.MeetingDetailsActivity" />
+        <activity android:name=".ui.meeting.initiatelist.MeetingInitiateListActivity" />
+
+        <service android:name=".service.MessageService" />
+
+        <activity android:name=".ui.meeting.signin.MeetingSignInFaceActivity" />
+        <activity android:name=".ui.meeting.signin.MeetingSignInActivity" />
+        <activity android:name=".ui.meeting.initiate.MeetingInitiateActivity" />
+        <activity android:name=".ui.meeting.initiate.MeetingInitiateChangeActivity" />
+        <activity android:name=".ui.meeting.list.MeetingListActivity" />
+        <activity android:name=".ui.checkthebed.checkdetails.CheckDetailsActivity" />
+        <activity android:name=".ui.checkthebed.choosebedroom.ChooseBedActivity" />
+        <activity android:name=".ui.checkthebed.tasklist.TaskListActivity" />
+        <activity android:name=".ui.outsider.OutsiderActivity" />
+        <activity android:name=".ui.outsider.Outsider2Activity" />
+        <activity android:name=".ui.InSchool.InSchoolActivity" />
+        <activity android:name=".ui.outSchool.OutSchoolActivity" />
+        <activity android:name=".ui.askLeaveDetails.ApproveDetailsActivity" />
+        <activity android:name=".ui.approveList.ApproveListActivity" />
+        <activity android:name=".ui.signIn.fieldWork.FaceWqRecognizeActivity" />
+        <activity android:name=".ui.faceRegister.FaceRegisterActivity" />
+        <activity android:name=".ui.home.fragment.home.MsgDetailsActivity" />
+        <activity
+            android:name=".ui.noticeMsg.newNotice.SendNoticeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".ui.noticeMsg.newNotice.NewNoticeActivity" />
+        <activity
+            android:name=".ui.noticeMsg.details.NoticeDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".ui.noticeMsg.list.NoticeListActivity" />
+        <activity android:name=".ui.changePwd.ChangePwdActivity" />
+        <activity android:name=".ui.Personal.InformationChageActivity" />
+        <activity android:name=".ui.Personal.PersonalInformationActivity" />
+        <activity android:name=".ui.performance.PerformanceActivity" />
+        <activity android:name=".ui.face.FaceActivity" />
+        <activity android:name=".ui.face.FaceRecognizeActivity" />
+        <activity android:name=".ui.face.FaceApproveActivity" />
+        <activity android:name=".ui.news.details.NewsDetailsActivity" />
+        <activity android:name=".ui.news.list.NewsListActivity" />
+        <activity android:name=".ui.askLeaveDetails.AskLeaveDetailsActivity" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/myLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.backbedroom.details.BackBedroomDetailsActivity" />
+        <activity android:name=".ui.backbedroom.list.BackBedroomListActivity" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity android:name=".ui.performanceDetails.PerformanceDetailsActivity" />
+        <activity android:name=".ui.performanceDetails.PerformanceDetailsSubmitActivity" />
+        <activity android:name=".ui.selectStudents.SelectStudentActivity" />
+        <activity android:name=".ui.backbedroom.send.BackBedroomActivity" />
+        <activity android:name=".ui.mobileOffice.MobileOfficeActivity" />
+        <activity android:name=".ui.leaveList.mine.MineLeaveListActivity" />
+        <activity android:name=".ui.askLeave.AskLeaveActivity" />
+        <activity android:name=".ui.leaveList.approve.ApproveLeaveListActivity" />
+        <activity android:name=".ui.signRecord.SignRecordActivity" />
+        <activity android:name=".ui.mapLocation.MapLocationActivity" />
+        <activity android:name=".ui.outReason.OutReasonActivity" />
+        <activity android:name=".ui.signIn.SignInActivity" />
+        <activity android:name=".ui.noticeMsg.newList.NoticeNewListActivity" />
+        <activity android:name=".ui.outSchool.OutSchoolDetailsActivity" />
+        <activity android:name=".ui.InSchool.InSchoolListActivity" />
+        <activity android:name=".ui.outsider.OutsiderListActivity" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" /> <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="29de03aa0d6eb7e4b0ede080bc1c60d1" /> <!-- 定位需要的服务 适配Android Q需要加上android:foregroundServiceType="location" -->
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:foregroundServiceType="location" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.yhzc.schooldormitorymobile.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

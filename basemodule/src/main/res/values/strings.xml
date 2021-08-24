@@ -1,0 +1,7 @@
+<resources>
+    <string name="image">image</string>
+    <string name="jckqz">考勤时间段获取失败\n请联系管理员检查考勤组设置</string>
+    <string name="retry">重试</string>
+
+    <string name="close">关闭</string>
+</resources>
